@@ -158,7 +158,9 @@ class TransformationDataTypeService
      * @param bool $includeSystemRead
      * @param bool $includeSystemWrite
      * @param bool $includeAdvancedRelations
+     *
      * @return array
+     *
      * @throws \Exception
      */
     public function getPimcoreDataTypes(string $classId, $transformationTargetType, bool $includeSystemRead, bool $includeSystemWrite, bool $includeAdvancedRelations): array
@@ -172,8 +174,8 @@ class TransformationDataTypeService
         }
 
         //replace for advanced relations
-        if($includeAdvancedRelations) {
-            $transformationTargetType = array_map(function($item) {
+        if ($includeAdvancedRelations) {
+            $transformationTargetType = array_map(function ($item) {
                 switch ($item) {
                     case self::ASSET_ARRAY:
                         return self::ADVANCED_ASSET_ARRAY;
