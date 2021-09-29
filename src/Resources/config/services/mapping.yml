@@ -108,6 +108,10 @@ services:
         tags:
             - { name: "pimcore.datahub.data_importer.data_target", type: "direct" }
 
+    Pimcore\Bundle\DataImporterBundle\Mapping\DataTarget\Relations:
+        tags:
+            - { name: "pimcore.datahub.data_importer.data_target", type: "relations" }
+
     Pimcore\Bundle\DataImporterBundle\Mapping\DataTarget\Classificationstore:
         tags:
             - { name: "pimcore.datahub.data_importer.data_target", type: "classificationstore" }
